@@ -4,15 +4,9 @@ export view5d
 using JavaCall
 using JavaShowMethods
 
-#View5D_jar = joinpath(Pkg.dir(), "View5D", "View5D.jar")
-#JavaCall.addClassPath(View5D_jar)
-
-
-# myArray= rand(64,64,3,1,1)  # this is the 5D-Array to display
-
 function view5d(myArray::Array)
         if ! JavaCall.isloaded()
-                JavaCall.init(["-Djava.class.path=$(joinpath(Pkg.dir(), "View5D/AllClasses"))"])
+                JavaCall.init(["-Djava.class.path=$(joinpath(Pkg.dir(), "View5D/java/src/"))"])
         end
         V = @JavaCall.jimport "View5D"
 

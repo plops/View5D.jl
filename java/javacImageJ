@@ -5,8 +5,7 @@ cd src
 # javac -target 1.1 -deprecation View5D_.java
 cp view5d/View5D_.java view5d/aaa.class
 rm view5d/*.class
-javac -target 1.5 -source 1.5 -deprecation -classpath ".:/usr/local/ImageJ/ij.jar" view5d/View5D_.java view5d/View5D.java  # -target 1.4 -source 1.2
-# javac -deprecation -classpath "." View5D_.java
+javac -deprecation -classpath ".:.julia/View5D/java/ImageJ/ij.jar" view5d/View5D_.java view5d/View5D.java 
 jar -cf View5D_.jar view5d/*.class plugins.config
 # cp /*.class /usr/local/ImageJ/plugins/View5D/
 cp View5D_.jar /usr/local/ImageJ/plugins/View5D/
