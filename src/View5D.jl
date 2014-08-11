@@ -12,7 +12,7 @@ using JavaShowMethods
 
 function view5d(myArray::Array)
         if ! JavaCall.isloaded()
-                JavaCall.init(["-Djava.class.path=$(joinpath(Pkg.dir(), "View5D\\AllClasses"))"])
+                JavaCall.init(["-Djava.class.path=$(joinpath(Pkg.dir(), "View5D/AllClasses"))"])
         end
         V = @JavaCall.jimport "View5D"
 
@@ -38,7 +38,8 @@ function view5d(myArray::Array)
                 jArr=Array{Float32,1};
                 myJArr=Array(jfloat,mysize);
             end
-            myJArr=reshape(myArray,[mysize]);  # copies all the data  or use reshape...
+            #myJArr=reshape(myArray,[mysize]);  # copies all the data  or use reshape...
+            myJArr[:] = myArray[:];
             myviewer=jcall(V, "Start5DViewer", JavaObject{:View5D}, (jArr, jfloat, jint, jint, jint, jint), myJArr, size(myArray,1), size(myArray,2), size(myArray,3), size(myArray,4),size(myArray,5));
         end
         return myviewer
