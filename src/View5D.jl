@@ -4,12 +4,11 @@ export view5d
 using JavaCall
 using JavaShowMethods
 
-<<<<<<< HEAD
 function view5d(myArray::Array)
-        if ! JavaCall.isloaded()
-                JavaCall.init(["-Djava.class.path=$(joinpath(Pkg.dir(), "View5D/java/src/"))"])
-        end
-        V = @JavaCall.jimport "View5D"
+    if ! JavaCall.isloaded()
+        JavaCall.init(["-Djava.class.path=$(joinpath(Pkg.dir(), "View5D/java/src/"))"])
+    end
+    V = @JavaCall.jimport "View5D"
 
     #myArray=img;
     if ! JavaCall.isloaded()
