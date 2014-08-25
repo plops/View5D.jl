@@ -4,7 +4,7 @@ In order to run on Gentoo GNU Linux:
 Install this repository and its dependencies:
 
 ```
-julia -e 'Pkg.clone("https://github.com/RainerHeintzmann/View5D.jl")'
+julia -e 'Pkg.clone("https://github.com/plops/View5D.jl")'
 julia -e 'Pkg.clone("https://github.com/RainerHeintzmann/JavaShowMethods.jl")'
 
 
@@ -47,4 +47,4 @@ histograms, tracking of features in 4D/5D stacks) but I only use it as
 a viewer.
 
 
-![Screenshot of View5D.](/doc/screen_example-view5d.jpg?raw=true "Screenshot of View5D.")
+![Screenshot of View5D.](/doc/screen_example-view5d.png?raw=true "Screenshot of View5D.")
