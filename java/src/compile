@@ -1,1 +1,1 @@
- javac -classpath /home/martin/.julia/View5D/java/ImageJ/ij.jar  *.java  -Xlint:deprecation
+ javac -classpath ../ImageJ/ij.jar   *.java  -Xlint:deprecation
